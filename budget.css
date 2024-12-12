@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+#transaction-list {
+  margin-top: 20px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
