@@ -7,27 +7,29 @@
     <link rel="stylesheet" href="budget.css" />
   </head>
   <body>
-    <h1>Budget Planner</h1>
-    <form id="transaction-form">
-      <input
-        type="text"
-        id="description-input"
-        placeholder="Description"
-        required
-      />
-      <input type="number" id="amount-input" placeholder="Amount" required />
-      <select id="category-input">
-        <option value="income">Income</option>
-        <option value="expense">Expense</option>
-      </select>
-      <button type="submit">Add Transaction</button>
-    </form>
-    <div id="balance-container">
-      <h2>Balance: $<span id="balance">0.00</span></h2>
-    </div>
-    <div id="transaction-list-container">
-      <h2>Transactions</h2>
-      <div id="transaction-list"></div>
+    <div class="container">
+      <h1>Budget Planner</h1>
+      <form id="transaction-form">
+        <input
+          type="text"
+          id="description-input"
+          placeholder="Description"
+          required
+        />
+        <input type="number" id="amount-input" placeholder="Amount" required />
+        <select id="category-input">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+      </form>
+      <div id="balance-container">
+        <h2>Balance: $<span id="balance">0.00</span></h2>
+      </div>
+      <div id="transaction-list-container">
+        <h2>Transactions</h2>
+        <div id="transaction-list"></div>
+      </div>
     </div>
     <script src="budget.js"></script>
   </body>
