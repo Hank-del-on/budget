@@ -1,3 +1,5 @@
+//setting up querySelector looks for description-input in the class sett up in the HTML page
+//it will not work if you don't have id="description" it's trying to look for
 const transactionForm = document.querySelector("#transaction-form");
 const descriptionInput = document.querySelector("#description-input");
 const amountInput = document.querySelector("#amount-input");
@@ -20,7 +22,7 @@ transactionForm.addEventListener("submit", (e) => {
   // Check if editing a transaction
   const editIndex = transactionForm.dataset.editIndex;
 
-  //creates new
+  //creates new transacton in container and list
   const newTransaction = {
     description: descriptionInput.value,
     amount: parseFloat(amountInput.value),
@@ -56,13 +58,18 @@ function renderTransactions(transArr) {
       transaction.timeStamp +
       " - " + // this is a seperator that literally is representing it self
       transaction.description +
-      ": $" + // this is the value in it self the currency represented as a symbol before the number
+      ": $" +                          
       transaction.amount.toFixed(2) +
-      " (" + // start of  category label.
+      " (" + .
       transaction.category +
-      ")"; // end of  category label.
-    // own section to add edit button
+      ")"; 
+    // own section to add edit button v
     const editButton = document.createElement("button");
+//
+    editButton.addEventListener("click", () => {
+      console.log("Edit button clicked for transaction:", transaction); //event listner to edit transaction selected
+    });
+//
     editButton.textContent = "Edit";
     editButton.classList.add("edit-button");
     editButton.addEventListener("click", () => {
@@ -99,8 +106,18 @@ function renderTransactions(transArr) {
 
 // Save transactions to local storage
 function saveToLocalStorage() {
-  localStorage.setItem("transactions", JSON.stringify(transactions));
+  localStorage.setItem("transactions", JSON.stringify(transactions)); // note  stringifying can refer to converting other data types (like numbers, arrays, or custom objects)
 }
 
 // Initial render
 renderTransactions(transactions);
+
+// console.log()
+
+console.log(
+  "Current balance: $" +
+    balance.toFixed(2) +
+    " with " +
+    transactions.length +
+    " transactions."
+);
