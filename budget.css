@@ -18,8 +18,9 @@ body {
   background-color: goldenrod;
   padding: 20px;
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 9px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-  width: 300px; /* Set a width for the container */
+
+  box-shadow: -10px 8px 20px rgba(0, 20, 0, 1.5); /* Subtle shadow */
+  width: 350px; /* Set a width for the container */
 }
 
 form {
@@ -54,6 +55,7 @@ button {
   border: none;
   cursor: pointer;
   padding: 5px; /* Add padding for clickability */
+  border-radius: 4px;
 }
 
 .edit-button {
@@ -62,4 +64,5 @@ button {
   border: none;
   cursor: pointer;
   padding: 5px; /* Add padding for clickability */
+  border-radius: 4px;
 }
