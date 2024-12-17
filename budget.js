@@ -60,7 +60,7 @@ function renderTransactions(transArr) {
       transaction.description +
       ": $" +                          
       transaction.amount.toFixed(2) +
-      " (" + .
+      " (" + 
       transaction.category +
       ")"; 
     // own section to add edit button v
